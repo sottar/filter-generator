@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+// Initialize Compass
+@import "compass";
+
+// Import Variables for Default Setting
+@import "setting";
+@import "reset";
+
+body {
+  background: url(../images/cheap_diagonal_fabric.png) repeat;
+  font-family: $baseFontFamily;
+  color: $baseFontColor;
+}
+.header {
+  font-size: 36px;
+  margin: 20px 0 35px;
+}
+.wrap {
+  margin: 0 auto;
+  width: 760px;
+}
+.images_block {
+  float: left;
+  width: 250px;
+  .image_box {
+    margin-bottom: 30px;
+    img {
+      display: block;
+    }
+  }
+}
+
+.right_block {
+  float: right;
+  width: 450px;
+  .slider_box {
+    margin: 30px 0;
+    .title {
+      font-size: 22px;
+      padding-bottom: 10px;
+    }
+    .switch {
+      .slider_title {
+        padding: 7px 10px;
+        width: 150px;
+        float: left;
+        font-size: 13px;
+        text-align: right;
+      }
+      .slider {
+        width: 200px;
+        cursor: pointer;
+        float: left;
+      }
+      .current_val {
+        padding: 3px 0 0 10px;
+        width: 57px;
+        text-align: right;
+        float: right;
+        font-size: 13px;
+      }
+    }
+    #generate_button {
+      margin: 10px 0px 0px 345px;
+      padding: 3px 8px;
+      display: inline-block;
+      background: #efefef;
+      font-size: 17px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-bottom: 2px solid #bbb;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.80;
+        -ms-filter: "alpha( opacity=80 )";
+      }
+    }
+  }
+  .css_area {
+    max-width: 450px;
+  }
+}
+
+/*////////////////////////////////////////
+	PARTS
+////////////////////////////////////////*/
+.description {
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}

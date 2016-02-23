@@ -1,0 +1,151 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  background: url(../images/cheap_diagonal_fabric.png) repeat;
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  color: #393939;
+}
+
+.header {
+  font-size: 36px;
+  margin: 20px 0 35px;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 760px;
+}
+
+.images_block {
+  float: left;
+  width: 250px;
+}
+.images_block .image_box {
+  margin-bottom: 30px;
+}
+.images_block .image_box img {
+  display: block;
+}
+
+.right_block {
+  float: right;
+  width: 450px;
+}
+.right_block .slider_box {
+  margin: 30px 0;
+}
+.right_block .slider_box .title {
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+.right_block .slider_box .switch .slider_title {
+  padding: 7px 10px;
+  width: 150px;
+  float: left;
+  font-size: 13px;
+  text-align: right;
+}
+.right_block .slider_box .switch .slider {
+  width: 200px;
+  cursor: pointer;
+  float: left;
+}
+.right_block .slider_box .switch .current_val {
+  padding: 3px 0 0 10px;
+  width: 57px;
+  text-align: right;
+  float: right;
+  font-size: 13px;
+}
+.right_block .slider_box #generate_button {
+  margin: 10px 0px 0px 345px;
+  padding: 3px 8px;
+  display: inline-block;
+  background: #efefef;
+  font-size: 17px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #bbb;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.right_block .slider_box #generate_button:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  -ms-filter: "alpha( opacity=80 )";
+}
+.right_block .css_area {
+  max-width: 450px;
+}
+
+/*////////////////////////////////////////
+	PARTS
+////////////////////////////////////////*/
+.description {
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}

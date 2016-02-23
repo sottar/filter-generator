@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta description="" />
+  <meta keyword="" />
+  <title>filter Generator</title>
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <script src="javascript/jquery-2.2.0.min.js"></script>
+  <script src="javascript/script.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="site_title">filter Generator</h1>
+    </header>
+    <div class="content clearfix">
+      <div class="images_block">
+        <p class="description">Before</p>
+        <div class="image_box" id="image_before ">
+          <img src="images/london_tower.jpg" alt="" />
+        </div>
+        <p class="description">After</p>
+        <div class="image_box" id="image_after">
+          <img src="images/london_tower.jpg" alt="" />
+        </div>
+      </div>
+      <div class="right_block">
+        <div class="slider_box">
+          <table>
+            <tbody>
+              <tr class="switch" id="blur">
+                <th class="slider_title">blur ぼかし</th>
+                <td class="clearfix">
+                  <input class="slider" type="range" min="0" max="10" value="0" data-unit="px" step="0.1" />
+                  <p class="current_val">0px</p>
+                </td>
+              </tr>
+              <tr class="switch" id="grayscale">
+                <th class="slider_title">grayscale モノクロ</th>
+                <td class="clearfix">
+                  <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
+                  <p class="current_val">0%</p>
+                </td>
+              </tr>
+              <tr class="switch" id="sepia">
+                <th class="slider_title">sepia セピア</th>
+                <td class="clearfix">
+                  <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
+                  <p class="current_val">0%</p>
+                </td>
+              </tr>
+              <tr class="switch" id="saturate">
+                <th class="slider_title">saturate 彩度</th>
+                <td class="clearfix">
+                  <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
+                  <p class="current_val">100%</p>
+                </td>
+              </tr>
+              <tr class="switch" id="hue-rotate">
+                <th class="slider_title">hue-rotate 色相回転</th>
+                <td class="clearfix">
+                  <input class="slider" type="range" min="0" max="360" value="0" data-unit="deg" />
+                  <p class="current_val">0deg</p>
+                </td>
+              </tr>
+              <tr class="switch" id="invert">
+                <th class="slider_title">invert 階調反転</th>
+                <td class="clearfix">
+                  <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
+                  <p class="current_val">0%</p>
+                </td>
+              </tr>
+              <tr class="switch" id="opacity">
+                <th class="slider_title">opacity 透明度</th>
+                <td class="clearfix">
+                  <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
+                  <p class="current_val">100%</p>
+                </td>
+              </tr>
+              <tr class="switch" id="brightness">
+                <th class="slider_title">brightness 明るさ</th>
+                <td class="clearfix">
+                  <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
+                  <p class="current_val">100%</p>
+                </td>
+              </tr>
+              <tr class="switch" id="contrast">
+                <th class="slider_title">contrast コンストラクト</th>
+                <td class="clearfix">
+                  <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
+                  <p class="current_val">100%</p>
+                </td>
+              </tr>
+              <tr class="switch" id="drop-shadow">
+                <th class="slider_title">drop-shadow 影</th>
+                <td class="clearfix">
+                  <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
+                  <p class="current_val">0%</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="generate_button">Generate</p>
+        </div>
+        <div class="css_box">
+          <p class="description">CSS</p>
+          <textarea class="css_area" name="css_area" rows="10" cols="70" placeholder=""></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
