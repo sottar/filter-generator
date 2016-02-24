@@ -23,11 +23,35 @@ body {
 .images_block {
   float: left;
   width: 250px;
+  .wrap_image {
+    position: relative;
+    background: #fff;
+  }
   .image_box {
     margin-bottom: 30px;
+    z-index: 1;
     img {
       display: block;
     }
+  }
+}
+
+#image_after {
+  &::before, &::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  &::before {
+    z-index: 2;
+  }
+  &::after {
+    z-index: 3;
   }
 }
 
@@ -40,27 +64,47 @@ body {
       font-size: 22px;
       padding-bottom: 10px;
     }
+    .slider_title {
+      padding: 7px 10px;
+      width: 150px;
+      float: left;
+      font-size: 13px;
+      text-align: right;
+    }
+    .silder {
+      cursor: pointer;
+      float: left;
+    }
     .switch {
-      .slider_title {
-        padding: 7px 10px;
-        width: 150px;
-        float: left;
-        font-size: 13px;
-        text-align: right;
-      }
       .slider {
         width: 200px;
-        cursor: pointer;
-        float: left;
       }
       .current_val {
         padding: 3px 0 0 10px;
-        width: 57px;
+        width: 53px;
         text-align: right;
         float: right;
         font-size: 13px;
       }
     }
+  .switch_color {
+    .slider {
+      width: 96px;
+      margin-left: 20px;
+    }
+    .jscolor {
+      margin-left: 0;
+      width: 80px;
+      float: left;
+    }
+    .current_val {
+      float: right;
+    }
+    .mix_blend {
+      margin-left: 0;
+      width: 170px;
+    }
+  }
     #generate_button {
       margin: 10px 0px 0px 345px;
       padding: 3px 8px;
@@ -82,8 +126,17 @@ body {
       }
     }
   }
+  .css_box {
+    padding-bottom: 30px;
+  }
   .css_area {
     max-width: 450px;
+  }
+}
+
+#drop-shadow {
+  .title {
+    font-size: 13px;
   }
 }
 

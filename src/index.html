@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta description="" />
-  <meta keyword="" />
+  <meta keyword="css, css3, filter, generator, mix-blend-mode, mix blend mode, " />
   <title>filter Generator</title>
   <link rel="stylesheet" href="stylesheets/style.css" />
-  <script src="javascript/jquery-2.2.0.min.js"></script>
+  <script src="javascript/plugins/jquery-2.2.0.min.js"></script>
+  <script src="javascript/plugins/jscolor.min.js"></script>
   <script src="javascript/script.js"></script>
 </head>
 <body>
+  </style>
   <div class="wrap">
     <header class="header">
       <h1 class="site_title">filter Generator</h1>
@@ -21,8 +23,10 @@
           <img src="images/london_tower.jpg" alt="" />
         </div>
         <p class="description">After</p>
-        <div class="image_box" id="image_after">
-          <img src="images/london_tower.jpg" alt="" />
+        <div class="wrap_image">
+          <div class="image_box" id="image_after">
+            <img src="images/london_tower.jpg" alt="" />
+          </div>
         </div>
       </div>
       <div class="right_block">
@@ -92,11 +96,73 @@
                   <p class="current_val">100%</p>
                 </td>
               </tr>
-              <tr class="switch" id="drop-shadow">
-                <th class="slider_title">drop-shadow 影</th>
+              <tr class="switch">
+                <th class="slider_title">BLEND MODE</th>
                 <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
-                  <p class="current_val">0%</p>
+                </td>
+              </tr>
+              <tr class="switch_color">
+                <th class="slider_title">color1 色1</th>
+                <td class="clearfix">
+                  <input class="slider jscolor {required:false}" id="color1" value="" />
+                  <input class="slider" id="opacity1" type="range" min="0" max="1" value="0.1" step="0.01" />
+                  <p class="current_val">0.1</p>
+                </td>
+              </tr>
+              <tr class="switch_color">
+                <th class="slider_title">mix-blend-mode1</th>
+                <td class="clearfix">
+                  <select class="mix_blend slider" name="" id="mix-blend-mode1">
+                    <option value="none">none</option>
+                    <option value="normal">normal</option>
+                    <option value="multiply">multiply</option>
+                    <option value="screen">screen</option>
+                    <option value="overlay">overlay</option>
+                    <option value="darken">darken</option>
+                    <option value="lighten">lighten</option>
+                    <option value="color-dodge">color-dodge</option>
+                    <option value="color-burn">color-burn</option>
+                    <option value="hard-light">hard-light</option>
+                    <option value="soft-light">soft-light</option>
+                    <option value="difference">difference</option>
+                    <option value="exclusion">exclusion</option>
+                    <option value="hue">hue</option>
+                    <option value="saturation">saturation</option>
+                    <option value="color">color</option>
+                    <option value="luminosity">luminosity</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="switch_color">
+                <th class="slider_title">color2 色2</th>
+                <td class="clearfix">
+                  <input class="slider jscolor {required:false}" id="color2" />
+                  <input class="slider" id="opacity2" type="range" min="0" max="1" value="0.1" step="0.01" />
+                  <p class="current_val">0.1</p>
+                </td>
+              </tr>
+              <tr class="switch_color">
+                <th class="slider_title">mix-blend-mode2</th>
+                <td class="clearfix">
+                  <select class="mix_blend slider" name="" id="mix-blend-mode2">
+                    <option value="none">none</option>
+                    <option value="normal">normal</option>
+                    <option value="multiply">multiply</option>
+                    <option value="screen">screen</option>
+                    <option value="overlay">overlay</option>
+                    <option value="darken">darken</option>
+                    <option value="lighten">lighten</option>
+                    <option value="color-dodge">color-dodge</option>
+                    <option value="color-burn">color-burn</option>
+                    <option value="hard-light">hard-light</option>
+                    <option value="soft-light">soft-light</option>
+                    <option value="difference">difference</option>
+                    <option value="exclusion">exclusion</option>
+                    <option value="hue">hue</option>
+                    <option value="saturation">saturation</option>
+                    <option value="color">color</option>
+                    <option value="luminosity">luminosity</option>
+                  </select>
                 </td>
               </tr>
             </tbody>
