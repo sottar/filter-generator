@@ -1,114 +1,391 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
-  <meta description="" />
-  <meta keyword="" />
-  <title>filter Generator</title>
-  <link rel="stylesheet" href="stylesheets/style.css" />
-  <script src="javascript/jquery-2.2.0.min.js"></script>
+  <meta description="Easiest CSS generator of filter and mix-blend-mode properties. Use these properties, you can edit images like photoshop with only CSS. CSS3 filter and mix-blend-mode supported." />
+  <meta keyword="filter, mix-blend-mode, generator, css, css3, ジェネレーター, mix blend mode, 自動生成" />
+  <title>CSS filter and blend modes Generator</title>
+  <link rel="stylesheet" href="stylesheets/style.min.css" />
+  <script src="javascript/plugins/jquery-2.2.0.min.js"></script>
+  <script src="javascript/plugins/jscolor.min.js"></script>
   <script src="javascript/script.js"></script>
 </head>
 <body>
+  <header class="header">
+    <div class="wrap">
+      <ul class="clearfix">
+        <li class="head_content donate"><a href="http://www.amazon.co.jp/registry/wishlist/3ROTDMK7P4QPO" target="_blank">donate (amazon)</a></li>
+        <li class="head_content mail"><a href="mailto:sottar.filter.generator@gmail.com" target="_blank">mail</a></li>
+        <li class="head_content mail"><a href="about/">about</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="wrap">
+    <h1 class="site_title">CSS filter and blend modes Generator</h1>
+    <p class="site_description">Easiest CSS generator of filter and mix-blend-mode properties. You can edit images like photoshop with only CSS.</p>
+  </section>
   <div class="wrap">
-    <header class="header">
-      <h1 class="site_title">filter Generator</h1>
-    </header>
+    <section class="image_upload clearfix">
+      <h2 class="uplaod_title">Upload Image</h2>
+      <form method="post" enctype="multipart/form-data" class="btn_up_image">
+        <input type="file" name="pic">
+      </form>
+    </section>
+    <!-- [content] -->
     <div class="content clearfix">
+      <!-- [images_block] -->
       <div class="images_block">
         <p class="description">Before</p>
         <div class="image_box" id="image_before ">
-          <img src="images/london_tower.jpg" alt="" />
+          <img src="images/london_tower.jpg" alt="" width="250" />
         </div>
         <p class="description">After</p>
-        <div class="image_box" id="image_after">
-          <img src="images/london_tower.jpg" alt="" />
+        <div class="wrap_image">
+          <div class="image_box" id="image_after">
+            <img src="images/london_tower.jpg" alt="" width="250" />
+          </div>
         </div>
       </div>
+      <!-- [/images_block] -->
       <div class="right_block">
-        <div class="slider_box">
-          <table>
-            <tbody>
-              <tr class="switch" id="blur">
-                <th class="slider_title">blur ぼかし</th>
-                <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="10" value="0" data-unit="px" step="0.1" />
-                  <p class="current_val">0px</p>
-                </td>
-              </tr>
-              <tr class="switch" id="grayscale">
-                <th class="slider_title">grayscale モノクロ</th>
-                <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
-                  <p class="current_val">0%</p>
-                </td>
-              </tr>
-              <tr class="switch" id="sepia">
-                <th class="slider_title">sepia セピア</th>
-                <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
-                  <p class="current_val">0%</p>
-                </td>
-              </tr>
-              <tr class="switch" id="saturate">
-                <th class="slider_title">saturate 彩度</th>
-                <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
-                  <p class="current_val">100%</p>
-                </td>
-              </tr>
-              <tr class="switch" id="hue-rotate">
-                <th class="slider_title">hue-rotate 色相回転</th>
-                <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="360" value="0" data-unit="deg" />
-                  <p class="current_val">0deg</p>
-                </td>
-              </tr>
-              <tr class="switch" id="invert">
-                <th class="slider_title">invert 階調反転</th>
-                <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
-                  <p class="current_val">0%</p>
-                </td>
-              </tr>
-              <tr class="switch" id="opacity">
-                <th class="slider_title">opacity 透明度</th>
-                <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
-                  <p class="current_val">100%</p>
-                </td>
-              </tr>
-              <tr class="switch" id="brightness">
-                <th class="slider_title">brightness 明るさ</th>
-                <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
-                  <p class="current_val">100%</p>
-                </td>
-              </tr>
-              <tr class="switch" id="contrast">
-                <th class="slider_title">contrast コンストラクト</th>
-                <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
-                  <p class="current_val">100%</p>
-                </td>
-              </tr>
-              <tr class="switch" id="drop-shadow">
-                <th class="slider_title">drop-shadow 影</th>
-                <td class="clearfix">
-                  <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
-                  <p class="current_val">0%</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p id="generate_button">Generate</p>
+        <!-- [slider_box] -->
+        <section class="slider_box">
+          <h2 class="detail_title">Detail Setting</h2>
+          <ul class="">
+            <li class="switch" id="blur">
+              <p class="slider_title">blur ぼかし</p>
+              <input class="slider" type="range" min="0" max="10" value="0" data-unit="px" step="0.1" />
+              <p class="current_val">0px</p>
+            </li>
+            <li class="switch" id="grayscale">
+              <p class="slider_title">grayscale モノクロ</p>
+              <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
+              <p class="current_val">0%</p>
+            </li>
+            <li class="switch" id="sepia">
+              <p class="slider_title">sepia セピア</p>
+              <input class="slider" type="range" min="0" max="200" value="0" data-unit="%" />
+              <p class="current_val">0%</p>
+            </li>
+            <li class="switch" id="saturate">
+              <p class="slider_title">saturate 彩度</p>
+              <input class="slider" type="range" min="0" max="200" value="100" data-unit="%" />
+              <p class="current_val">100%</p>
+            </li>
+            <li class="switch" id="hue-rotate">
+              <p class="slider_title">hue-rotate 色相回転</p>
+              <input class="slider" type="range" min="0" max="360" value="0" data-unit="deg" />
+              <p class="current_val">0deg</p>
+            </li>
+            <li class="switch" id="invert">
+              <p class="slider_title">invert 階調反転</p>
+              <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
+              <p class="current_val">0%</p>
+            </li>
+            <li class="switch" id="opacity">
+              <p class="slider_title">opacity 透明度</p>
+              <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
+              <p class="current_val">100%</p>
+            </li>
+            <li class="switch" id="brightness">
+              <p class="slider_title">brightness 明るさ</p>
+              <input class="slider" type="range" min="0" max="200" value="100" data-unit="%" />
+              <p class="current_val">100%</p>
+            </li>
+            <li class="switch" id="contrast">
+              <p class="slider_title">contrast コントラスト</p>
+              <input class="slider" type="range" min="0" max="200" value="100" data-unit="%" />
+              <p class="current_val">100%</p>
+            </li>
+            <li class="switch options">
+              <p class="title_option">Options</p>
+              <p class="slider_title btn" id="blend_mode_btn">BLEND MODE &#9661;</p>
+            </li>
+            <li>
+              <ul class="blend_mode_block">
+                <li class="switch_color">
+                  <p class="slider_title">color1 色1</p>
+                  <input class="slider on jscolor {required:false}" id="color1" value="" />
+                  <input class="slider" id="opacity1" type="range" min="0" max="1" value="0.1" step="0.01" />
+                  <p class="current_val">0.1</p>
+                </li>
+                <li class="switch_color">
+                  <p class="slider_title">mix-blend-mode1</p>
+                  <select class="mix_blend slider" name="" id="mix-blend-mode1">
+                    <option value="none">none</option>
+                    <option value="normal">normal</option>
+                    <option value="multiply">multiply</option>
+                    <option value="screen">screen</option>
+                    <option value="overlay">overlay</option>
+                    <option value="darken">darken</option>
+                    <option value="lighten">lighten</option>
+                    <option value="color-dodge">color-dodge</option>
+                    <option value="color-burn">color-burn</option>
+                    <option value="hard-light">hard-light</option>
+                    <option value="soft-light">soft-light</option>
+                    <option value="difference">difference</option>
+                    <option value="exclusion">exclusion</option>
+                    <option value="hue">hue</option>
+                    <option value="saturation">saturation</option>
+                    <option value="color">color</option>
+                    <option value="luminosity">luminosity</option>
+                  </select>
+                </li>
+                <li class="switch_color">
+                  <p class="slider_title">color2 色2</p>
+                  <input class="slider on jscolor {required:false}" id="color2" />
+                  <input class="slider" id="opacity2" type="range" min="0" max="1" value="0.1" step="0.01" />
+                  <p class="current_val">0.1</p>
+                </li>
+                <li class="switch_color">
+                  <p class="slider_title">mix-blend-mode2</p>
+                  <select class="mix_blend slider" name="" id="mix-blend-mode2">
+                    <option value="none">none</option>
+                    <option value="normal">normal</option>
+                    <option value="multiply">multiply</option>
+                    <option value="screen">screen</option>
+                    <option value="overlay">overlay</option>
+                    <option value="darken">darken</option>
+                    <option value="lighten">lighten</option>
+                    <option value="color-dodge">color-dodge</option>
+                    <option value="color-burn">color-burn</option>
+                    <option value="hard-light">hard-light</option>
+                    <option value="soft-light">soft-light</option>
+                    <option value="difference">difference</option>
+                    <option value="exclusion">exclusion</option>
+                    <option value="hue">hue</option>
+                    <option value="saturation">saturation</option>
+                    <option value="color">color</option>
+                    <option value="luminosity">luminosity</option>
+                  </select>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <!-- [/slider_box] -->
+        <!-- [recommend_box] -->
+        <p class="recommend_title">Recommend Setting ~Instagram Like~</p>
+        <div class="recommend_box">
+          <ul class="wrap_recommends clearfix">
+            <li class="recommend_list">
+              <p class="recommend_description">no-filter</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="nofilter">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">1977</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="_1977">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">Aden</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="aden">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">inkwell</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="inkwell">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">reyes</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="reyes">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">gingham</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="gingham">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">toaster</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="toaster">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">walden</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="walden">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">hudson</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="hudson">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">earlybird</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="earlybird">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">mayfair</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="mayfair">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">lofi</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="lofi">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">brooklyn</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="brooklyn">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">xpro2</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="xpro2">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">nashville</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="nashville">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">lark</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="lark">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">moon</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="moon">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">clarendon</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="clarendon">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">willow</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="willow">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">rise</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="rise">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="recommend_list">
+              <p class="recommend_description">slumber</p>
+              <div class="recommend_image_wrap">
+                <div class="recommend_image" id="slumber">
+                  <img src="images/london_tower.jpg" width="70" alt="" />
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="css_box">
-          <p class="description">CSS</p>
+        <!-- [/recommend_box] -->
+        <div class="btn_wrapper">
+          <p id="generate_button" class="btn">Generate</p>
+        </div>
+        <!-- [css_box] -->
+        <section class="css_box">
+          <h2 class="description">CSS</h2>
           <textarea class="css_area" name="css_area" rows="10" cols="70" placeholder=""></textarea>
-        </div>
+        </section>
+        <!-- [/css_box] -->
       </div>
     </div>
+    <!-- [/content] -->
   </div>
+  <!-- [/wrap] -->
+
+  <!-- adsense -->
+  <div class="wrap">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- CSS filter generator -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5873669074216750"
+         data-ad-slot="2040518228"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <ul class="clearfix">
+        <li class="foot_content copy">copyright &copy; 2016 sottar.net</li>
+        <li class="foot_content donate"><a href="http://www.amazon.co.jp/registry/wishlist/3ROTDMK7P4QPO" target="_blank">donate (amazon)</a></li>
+        <li class="foot_content mail"><a href="mailto:sottar.filter.generator@gmail.com" target="_blank">mail</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-59849686-2', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 </html>

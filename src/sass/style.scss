@@ -4,17 +4,26 @@
 @import "compass";
 
 // Import Variables for Default Setting
-@import "setting";
 @import "reset";
+@import "setting";
+@import "instaEffects";
 
 body {
   background: url(../images/cheap_diagonal_fabric.png) repeat;
   font-family: $baseFontFamily;
   color: $baseFontColor;
 }
-.header {
+.site_title {
   font-size: 36px;
-  margin: 20px 0 35px;
+  margin: 35px 0 5px;
+  a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
+}
+.site_description {
+  margin-bottom: 20px;
 }
 .wrap {
   margin: 0 auto;
@@ -23,11 +32,47 @@ body {
 .images_block {
   float: left;
   width: 250px;
+  .wrap_image {
+    position: relative;
+    background: #fff;
+  }
   .image_box {
     margin-bottom: 30px;
+    z-index: 1;
     img {
       display: block;
     }
+  }
+}
+
+.image_upload {
+  padding-bottom: 15px;
+  .uplaod_title {
+    font-size: 18px;
+    float: left;
+  }
+  .btn_up_image {
+    float: left;
+    padding-left: 15px;
+  }
+}
+
+#image_after {
+  &::before, &::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  &::before {
+    z-index: 2;
+  }
+  &::after {
+    z-index: 3;
   }
 }
 
@@ -35,67 +80,269 @@ body {
   float: right;
   width: 450px;
   .slider_box {
-    margin: 30px 0;
+    margin-bottom: 30px;
+    .detail_title {
+      padding-bottom: 5px;
+      font-size: 18px;
+    }
     .title {
       font-size: 22px;
       padding-bottom: 10px;
     }
-    .switch {
-      .slider_title {
-        padding: 7px 10px;
-        width: 150px;
+    .options {
+      padding-top: 10px;
+      .title_option {
         float: left;
+        padding: 7px 30px;
         font-size: 13px;
-        text-align: right;
+        width: auto;
+        text-align: left;
       }
+    }
+    .slider_title {
+      padding: 7px 10px;
+      width: 140px;
+      float: left;
+      font-size: 13px;
+      text-align: right;
+    }
+    .switch {
+      overflow: hidden;
+      clear: both;
       .slider {
         width: 200px;
-        cursor: pointer;
-        float: left;
       }
       .current_val {
         padding: 3px 0 0 10px;
-        width: 57px;
+        width: 53px;
         text-align: right;
         float: right;
         font-size: 13px;
       }
     }
-    #generate_button {
-      margin: 10px 0px 0px 345px;
-      padding: 3px 8px;
-      display: inline-block;
-      background: #efefef;
-      font-size: 17px;
+    #blend_mode_btn {
+      width: 120px;
+      padding: 5px 2px 3px;
       text-align: center;
-      border: 1px solid #ccc;
-      border-bottom: 2px solid #bbb;
-      -webkit-border-radius: 7px;
-      -moz-border-radius: 7px;
-      border-radius: 7px;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.8;
-        filter: alpha(opacity=80);
-        -moz-opacity: 0.80;
-        -ms-filter: "alpha( opacity=80 )";
+    }
+    .blend_mode_block {
+      display: none;
+    }
+    .switch_color {
+      clear: both;
+      overflow: hidden;
+      .slider {
+        width: 96px;
+        margin-left: 20px;
+      }
+      .jscolor {
+        margin-left: 0;
+        width: 80px;
+        float: left;
+        &.on {
+          border-color: #ffdf98;
+        }
+      }
+      .current_val {
+        float: right;
+      }
+      .mix_blend {
+        margin-left: 0;
+        width: 170px;
       }
     }
+  }
+  .recommend_title {
+    padding-bottom: 5px;
+    font-size: 18px;
+  }
+  .recommend_box {
+    height: 200px;
+    overflow: scroll;
+    .wrap_recommends {
+      height: 200px;
+    }
+    .recommend_list {
+      float: left;
+      margin: 3px 15px;
+      .recommend_description {
+        font-size: 12px;
+      }
+    }
+    .recommend_image_wrap {
+      position: relative;
+      .recommend_image {
+        &::before, &::after {
+          content: '';
+          height: 100%;
+          width: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+        }
+        &::before {
+          z-index: 2;
+        }
+        &::after {
+          z-index: 3;
+        }
+      }
+    }
+  }
+  .css_box {
+    padding-bottom: 30px;
   }
   .css_area {
     max-width: 450px;
   }
 }
 
+#drop-shadow {
+  .title {
+    font-size: 13px;
+  }
+}
+#generate_button {
+  margin: 10px 0px 0px 345px;
+  font-size: 17px;
+}
+
+.header {
+  padding: 5px 0;
+  background: #222;
+  color: #ededed;
+  font-size: 14px;
+  .head_content {
+    padding-left: 15px;
+    float: right;
+  }
+}
+
+.footer {
+  padding: 10px 0;
+  background: #222;
+  color: #ededed;
+  font-size: 14px;
+  .foot_content {
+    padding-left: 15px;
+    float: right;
+    a {
+      color: #d18904;
+    }
+  }
+  .copy {
+    padding-left: 20px;
+    font-size: 12px;
+    text-align: right;
+  }
+}
+
+/* about
+----------------------------------*/
+#about {
+  background: url(../images/cheap_diagonal_fabric.png) repeat;
+  line-height: 20px;
+  .index_content {
+    padding-bottom: 20px;
+  }
+  .title {
+    padding: 20px 0;
+    font-size: 26px;
+  }
+  p {
+    font-family: Avenir ,"Open Sans" ,"Helvetica Neue" ,Helvetica ,Arial ,Verdana ,Roboto ,"游ゴシック" ,"Yu Gothic" ,"游ゴシック体", "ヒラギノ角ゴ Pro W3" ,"Hiragino Kaku Gothic Pro" ,"Meiryo UI" ,"メイリオ" ,Meiryo ,"ＭＳ Ｐゴシック" ,"MS PGothic" ,sans-serif;
+  }
+  .kinds_box {
+    background: #eee;
+    border: 1px solid #000;
+    li {
+      height: 52px;
+    }
+    .title {
+      padding: 5px;
+      width: 120px;
+      height: 40px;
+      border: 1px solid #000;
+      font-size: 15px;
+      float: left;
+    }
+    .english {
+      padding: 5px;
+      width: 110px;
+      height: 40px;
+      border: 1px solid #000;
+      font-size: 14px;
+      float: left;
+    }
+    .description {
+      padding: 5px;
+      height: 40px;
+      width: 492px;
+      border: 1px solid #000;
+      font-size: 16px;
+      float: left;
+    }
+  }
+  #howtouse {
+    padding-bottom: 30px;
+  }
+}
+
+
 /*////////////////////////////////////////
 	PARTS
 ////////////////////////////////////////*/
 .description {
-  font-size: 17px;
+  font-size: 18px;
   padding-bottom: 10px;
+}
+.btn {
+  padding: 3px 8px;
+  display: inline-block;
+  background: #efefef;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #bbb;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  cursor: pointer;
+  -webkit-transition: opacity 0.1s linear;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transition: opacity 0.1s linear;
+  -mox-transform-origin: 50% 50%;
+  &:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.80;
+    -ms-filter: "alpha( opacity=80 )";
+  }
 }
 .clearfix:after {
 	content: "";
 	display: block;
 	clear: both;
+}
+
+.header, .footer {
+  a {
+    color: #ededed;
+    text-decoration: none;
+    -webkit-transition: opacity 0.3s linear;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transition: opacity 0.3s linear;
+    -mox-transform-origin: 50% 50%;
+    &:hover {
+      opacity: 0.8;
+      filter: alpha(opacity=80);
+      -moz-opacity: 0.80;
+      -ms-filter: "alpha( opacity=80 )";
+    }
+  }
+}
+
+.underline {
+  background: linear-gradient(rgba(0,0,0,0) 70%,#ffff88 100%);
 }

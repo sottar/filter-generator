@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta description="mix-blend-modeはDOMエレメントを重ねた時の見え方を指定するCSSプロパティです。画像編集ソフトで昔から搭載されているもので、クリエイティブを作る上で基本機能の一つです。" />
+  <meta keyword="mix-blend-mode, 使いかた, とは, filter, css, css3, mix blend mode, generator" />
+  <title>CSS filter Generator</title>
+  <link rel="stylesheet" href="../stylesheets/style.min.css" />
+  <script src="../javascript/plugins/jquery-2.2.0.min.js"></script>
+  <script src="../javascript/script.js"></script>
+</head>
+<body id="about">
+  <header class="header">
+    <div class="wrap">
+      <ul class="clearfix">
+        <li class="head_content donate"><a href="http://www.amazon.co.jp/registry/wishlist/3ROTDMK7P4QPO" target="_blank">donate (amazon)</a></li>
+        <li class="head_content mail"><a href="mailto:sottar.filter.generator@gmail.com" target="_blank">mail</a></li>
+        <li class="head_content about"><a href="../">top</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="wrap">
+    <h1 class="site_title"><a href="../">CSS filter Generator</a></h1>
+    <section class="index_content">
+      <h2 class="title">目次</h2>
+      <ul>
+        <li><a href="#about_site">サイトについて</a></li>
+        <li><a href="#about_blend_mode">mix-blend-modeとは？</a></li>
+        <li><a href="#blend_mode_kinds">mix-blend-modeの種類</a></li>
+        <li><a href="#howtouse">サイトの使い方</a></li>
+      </ul>
+    </section>
+    <section class="about_block" id="about_site">
+      <h2 class="title">サイトについて</h2>
+      <p>
+        CSS3のプロパティ、filterとmix-blend-modeを使用することで画像編集ソフトを使わずに<span class="underline">instagramのような画像編集をCSSのみで</span>行えるようになりました。<br />
+        これは使える！ということで、編集前と編集後の画像を比べながら作成することができるgeneratorサイトを作成しました。
+      </p>
+    </section>
+    <section class="about_block" id="about_blend_mode">
+      <h2 class="title">mix-blend-modeとは？</h2>
+      <p>
+        mix-blend-modeというCSS3のプロパティ。DOMエレメントを重ねた時の見え方、どのように重ねて表示させるか、を指定するCSSプロパティです。<br />
+        PhotoshopやIllustratorなどの画像編集ソフトで昔から搭載されているものですが、クリエイティブを作る上で基本機能の一つです。<br />
+        Webの表現手法が広がり、<span class="underline">デザインの自由度が広がる注目すべきCSSプロパティです。</span>
+      </p>
+    </section>
+    <section class="about_block" id="blend_mode_kinds">
+      <h2 class="title">mix-blend-modeの種類</h2>
+      <ul class="kinds_box">
+        <li class="clearfix">
+          <p class="title">比較(暗)</p>
+          <p class="english">darken</p>
+          <p class="description">上下の画像を比較して暗いピクセルが表示される</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">比較(明)</p>
+          <p class="english">lighten</p>
+          <p class="description">上下の画像を比較して明るいピクセルが表示される</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">乗算</p>
+          <p class="english">multiply</p>
+          <p class="description">暗い表現を作るときに使う描画モード</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">焼きこみ</p>
+          <p class="english">color-burn</p>
+          <p class="description">乗算よりもより暗くなる描画モード</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">スクリーン</p>
+          <p class="english">screen</p>
+          <p class="description">明るい表現を作るときに使う。かなり使える</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">覆い焼き</p>
+          <p class="english">color-dodge</p>
+          <p class="description">スクリーンよりもより明るくなる。インパクトが得られるのでエフェクト作成時などこれもかなりよく使う</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">オーバーレイ</p>
+          <p class="english">overlay</p>
+          <p class="description">乗算とスクリーンの両方に近い効果が得られる。コントラストがあがるため見栄えの印象が上がる</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">ソフトライト</p>
+          <p class="english">soft-light</p>
+          <p class="description">明るい部分はさらに明るく、暗い部分はされに暗くする</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">ハードライト</p>
+          <p class="english">hard-light</p>
+          <p class="description">ソフトライトよりも強い効果が得られる</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">差の絶対値</p>
+          <p class="english">difference</p>
+          <p class="description">二枚の画像の違いを可視化するのに役立つ</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">除外</p>
+          <p class="english">exclusion</p>
+          <p class="description">差の絶対値よりも弱い効果が得られる</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">色相</p>
+          <p class="english">hue</p>
+          <p class="description">HSL色空間で合成。下位レイヤーの輝度(L)と彩度(S)、上位レイヤーの色相(H)を持つカラーが得られる</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">彩度</p>
+          <p class="english">saturation</p>
+          <p class="description">HSL色空間で合成。下位レイヤーの輝度(L)と色相(H)、上位レイヤーの彩度(S)を持つカラーが得られる</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">カラー</p>
+          <p class="english">color</p>
+          <p class="description">HSL色空間で合成。下位レイヤーの輝度(L)、上位レイヤーの彩度(S)と色相(H)を持つカラーが得られる</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">輝度</p>
+          <p class="english">luminosity</p>
+          <p class="description">HSL色空間で合成。下位レイヤーの彩度(S)と色相(H)、上位レイヤーの輝度(L)を持つカラーが得られる</p>
+        </li>
+      </ul>
+    </section>
+    <section class="about_block" id="howtouse">
+      <h2 class="title">サイトの使い方</h2>
+      <ul>
+        <li><p>右カラムにあるパラメータを調節することで画像を編集することができます。</p></li>
+        <li><p>optionのblend-modeを使用することで上にかぶせる色を指定することもできます。</p></li>
+        <li><p>Generateボタンを押すことで指定してあるCSSが吐き出されます。</p></li>
+      </ul>
+    </section>
+  </section>
+  <!-- [/wrap] -->
+
+  <!-- adsense -->
+  <div class="wrap">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- CSS filter generator -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5873669074216750"
+         data-ad-slot="2040518228"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <ul class="clearfix">
+        <li class="foot_content copy">copyright &copy; 2016 sottar.jp</li>
+        <li class="foot_content donate"><a href="http://www.amazon.co.jp/registry/wishlist/3ROTDMK7P4QPO" target="_blank">donate (amazon)</a></li>
+        <li class="foot_content mail"><a href="mailto:sottar.filter.generator@gmail.com" target="_blank">mail</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-59849686-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
