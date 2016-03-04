@@ -1,6 +1,8 @@
 # filter-generator
 You can edit image like a instagram filter with only CSS.
 
+[http://www.sottar.net/filter-generator/](http://www.sottar.net/filter-generator/)
+
 ![site image](http://www.sottar.net/images/filter_generator.png)
 
 ## about
