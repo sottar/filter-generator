@@ -81,6 +81,12 @@ body {
   width: 450px;
   .slider_box {
     margin-bottom: 30px;
+    #detail_btn {
+      cursor: pointer;
+    }
+    .switch_box {
+      display: none;
+    }
     .detail_title {
       padding-bottom: 5px;
       font-size: 18px;
@@ -124,9 +130,6 @@ body {
       width: 120px;
       padding: 5px 2px 3px;
       text-align: center;
-    }
-    .blend_mode_block {
-      display: none;
     }
     .switch_color {
       clear: both;
@@ -344,4 +347,8 @@ body {
 
 .underline {
   background: linear-gradient(rgba(0,0,0,0) 70%,#ffff88 100%);
+}
+
+.adsense {
+  margin: 20px auto;
 }

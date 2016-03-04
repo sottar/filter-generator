@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta description="Easiest CSS generator of filter and mix-blend-mode properties. Use these properties, you can edit images like photoshop with only CSS. CSS3 filter and mix-blend-mode supported." />
-  <meta keyword="filter, mix-blend-mode, generator, css, css3, ジェネレーター, mix blend mode, 自動生成" />
-  <title>CSS filter and blend modes Generator</title>
+  <meta keyword="instagram, css, css3, filter, mix-blend-mode, generator, ジェネレーター, mix blend mode, 自動生成" />
+  <title>instagram filter generator</title>
   <link rel="stylesheet" href="stylesheets/style.min.css" />
   <script src="javascript/plugins/jquery-2.2.0.min.js"></script>
   <script src="javascript/plugins/jscolor.min.js"></script>
@@ -22,7 +22,9 @@
   </header>
   <section class="wrap">
     <h1 class="site_title">CSS filter and blend modes Generator</h1>
-    <p class="site_description">Easiest CSS generator of filter and mix-blend-mode properties. You can edit images like photoshop with only CSS.</p>
+    <p class="site_description">You can edit like a instagram filter with only CSS.<br /><br />
+      mix-blend-modeの説明については<a href="about/">こちら</a>
+    </p>
   </section>
   <div class="wrap">
     <section class="image_upload clearfix">
@@ -48,122 +50,6 @@
       </div>
       <!-- [/images_block] -->
       <div class="right_block">
-        <!-- [slider_box] -->
-        <section class="slider_box">
-          <h2 class="detail_title">Detail Setting</h2>
-          <ul class="">
-            <li class="switch" id="blur">
-              <p class="slider_title">blur ぼかし</p>
-              <input class="slider" type="range" min="0" max="10" value="0" data-unit="px" step="0.1" />
-              <p class="current_val">0px</p>
-            </li>
-            <li class="switch" id="grayscale">
-              <p class="slider_title">grayscale モノクロ</p>
-              <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
-              <p class="current_val">0%</p>
-            </li>
-            <li class="switch" id="sepia">
-              <p class="slider_title">sepia セピア</p>
-              <input class="slider" type="range" min="0" max="200" value="0" data-unit="%" />
-              <p class="current_val">0%</p>
-            </li>
-            <li class="switch" id="saturate">
-              <p class="slider_title">saturate 彩度</p>
-              <input class="slider" type="range" min="0" max="200" value="100" data-unit="%" />
-              <p class="current_val">100%</p>
-            </li>
-            <li class="switch" id="hue-rotate">
-              <p class="slider_title">hue-rotate 色相回転</p>
-              <input class="slider" type="range" min="0" max="360" value="0" data-unit="deg" />
-              <p class="current_val">0deg</p>
-            </li>
-            <li class="switch" id="invert">
-              <p class="slider_title">invert 階調反転</p>
-              <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
-              <p class="current_val">0%</p>
-            </li>
-            <li class="switch" id="opacity">
-              <p class="slider_title">opacity 透明度</p>
-              <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
-              <p class="current_val">100%</p>
-            </li>
-            <li class="switch" id="brightness">
-              <p class="slider_title">brightness 明るさ</p>
-              <input class="slider" type="range" min="0" max="200" value="100" data-unit="%" />
-              <p class="current_val">100%</p>
-            </li>
-            <li class="switch" id="contrast">
-              <p class="slider_title">contrast コントラスト</p>
-              <input class="slider" type="range" min="0" max="200" value="100" data-unit="%" />
-              <p class="current_val">100%</p>
-            </li>
-            <li class="switch options">
-              <p class="title_option">Options</p>
-              <p class="slider_title btn" id="blend_mode_btn">BLEND MODE &#9661;</p>
-            </li>
-            <li>
-              <ul class="blend_mode_block">
-                <li class="switch_color">
-                  <p class="slider_title">color1 色1</p>
-                  <input class="slider on jscolor {required:false}" id="color1" value="" />
-                  <input class="slider" id="opacity1" type="range" min="0" max="1" value="0.1" step="0.01" />
-                  <p class="current_val">0.1</p>
-                </li>
-                <li class="switch_color">
-                  <p class="slider_title">mix-blend-mode1</p>
-                  <select class="mix_blend slider" name="" id="mix-blend-mode1">
-                    <option value="none">none</option>
-                    <option value="normal">normal</option>
-                    <option value="multiply">multiply</option>
-                    <option value="screen">screen</option>
-                    <option value="overlay">overlay</option>
-                    <option value="darken">darken</option>
-                    <option value="lighten">lighten</option>
-                    <option value="color-dodge">color-dodge</option>
-                    <option value="color-burn">color-burn</option>
-                    <option value="hard-light">hard-light</option>
-                    <option value="soft-light">soft-light</option>
-                    <option value="difference">difference</option>
-                    <option value="exclusion">exclusion</option>
-                    <option value="hue">hue</option>
-                    <option value="saturation">saturation</option>
-                    <option value="color">color</option>
-                    <option value="luminosity">luminosity</option>
-                  </select>
-                </li>
-                <li class="switch_color">
-                  <p class="slider_title">color2 色2</p>
-                  <input class="slider on jscolor {required:false}" id="color2" />
-                  <input class="slider" id="opacity2" type="range" min="0" max="1" value="0.1" step="0.01" />
-                  <p class="current_val">0.1</p>
-                </li>
-                <li class="switch_color">
-                  <p class="slider_title">mix-blend-mode2</p>
-                  <select class="mix_blend slider" name="" id="mix-blend-mode2">
-                    <option value="none">none</option>
-                    <option value="normal">normal</option>
-                    <option value="multiply">multiply</option>
-                    <option value="screen">screen</option>
-                    <option value="overlay">overlay</option>
-                    <option value="darken">darken</option>
-                    <option value="lighten">lighten</option>
-                    <option value="color-dodge">color-dodge</option>
-                    <option value="color-burn">color-burn</option>
-                    <option value="hard-light">hard-light</option>
-                    <option value="soft-light">soft-light</option>
-                    <option value="difference">difference</option>
-                    <option value="exclusion">exclusion</option>
-                    <option value="hue">hue</option>
-                    <option value="saturation">saturation</option>
-                    <option value="color">color</option>
-                    <option value="luminosity">luminosity</option>
-                  </select>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <!-- [/slider_box] -->
         <!-- [recommend_box] -->
         <p class="recommend_title">Recommend Setting ~Instagram Like~</p>
         <div class="recommend_box">
@@ -257,14 +143,6 @@
               </div>
             </li>
             <li class="recommend_list">
-              <p class="recommend_description">lofi</p>
-              <div class="recommend_image_wrap">
-                <div class="recommend_image" id="lofi">
-                  <img src="images/london_tower.jpg" width="70" alt="" />
-                </div>
-              </div>
-            </li>
-            <li class="recommend_list">
               <p class="recommend_description">brooklyn</p>
               <div class="recommend_image_wrap">
                 <div class="recommend_image" id="brooklyn">
@@ -339,6 +217,121 @@
           </ul>
         </div>
         <!-- [/recommend_box] -->
+        <!-- [slider_box] -->
+        <section class="slider_box">
+          <h2 class="detail_title" id="detail_btn">Detail Setting <span class="triangle">&#9661;</span></h2>
+          <ul class="switch_box">
+            <li class="switch" id="blur">
+              <p class="slider_title">blur ぼかし</p>
+              <input class="slider" type="range" min="0" max="10" value="0" data-unit="px" step="0.1" />
+              <p class="current_val">0px</p>
+            </li>
+            <li class="switch" id="grayscale">
+              <p class="slider_title">grayscale モノクロ</p>
+              <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
+              <p class="current_val">0%</p>
+            </li>
+            <li class="switch" id="sepia">
+              <p class="slider_title">sepia セピア</p>
+              <input class="slider" type="range" min="0" max="200" value="0" data-unit="%" />
+              <p class="current_val">0%</p>
+            </li>
+            <li class="switch" id="saturate">
+              <p class="slider_title">saturate 彩度</p>
+              <input class="slider" type="range" min="0" max="200" value="100" data-unit="%" />
+              <p class="current_val">100%</p>
+            </li>
+            <li class="switch" id="hue-rotate">
+              <p class="slider_title">hue-rotate 色相回転</p>
+              <input class="slider" type="range" min="0" max="360" value="0" data-unit="deg" />
+              <p class="current_val">0deg</p>
+            </li>
+            <li class="switch" id="invert">
+              <p class="slider_title">invert 階調反転</p>
+              <input class="slider" type="range" min="0" max="100" value="0" data-unit="%" />
+              <p class="current_val">0%</p>
+            </li>
+            <li class="switch" id="opacity">
+              <p class="slider_title">opacity 透明度</p>
+              <input class="slider" type="range" min="0" max="100" value="100" data-unit="%" />
+              <p class="current_val">100%</p>
+            </li>
+            <li class="switch" id="brightness">
+              <p class="slider_title">brightness 明るさ</p>
+              <input class="slider" type="range" min="0" max="200" value="100" data-unit="%" />
+              <p class="current_val">100%</p>
+            </li>
+            <li class="switch" id="contrast">
+              <p class="slider_title">contrast コントラスト</p>
+              <input class="slider" type="range" min="0" max="200" value="100" data-unit="%" />
+              <p class="current_val">100%</p>
+            </li>
+            <li class="switch options">
+              <p class="title_option">BLEND MODE</p>
+            </li>
+            <li>
+              <ul class="blend_mode_block">
+                <li class="switch_color">
+                  <p class="slider_title">color1 色1</p>
+                  <input class="slider on jscolor {required:false}" id="color1" value="" />
+                  <input class="slider" id="opacity1" type="range" min="0" max="1" value="0.1" step="0.01" />
+                  <p class="current_val">0.1</p>
+                </li>
+                <li class="switch_color">
+                  <p class="slider_title">mix-blend-mode1</p>
+                  <select class="mix_blend slider" name="" id="mix-blend-mode1">
+                    <option value="none">none</option>
+                    <option value="normal">normal</option>
+                    <option value="multiply">multiply</option>
+                    <option value="screen">screen</option>
+                    <option value="overlay">overlay</option>
+                    <option value="darken">darken</option>
+                    <option value="lighten">lighten</option>
+                    <option value="color-dodge">color-dodge</option>
+                    <option value="color-burn">color-burn</option>
+                    <option value="hard-light">hard-light</option>
+                    <option value="soft-light">soft-light</option>
+                    <option value="difference">difference</option>
+                    <option value="exclusion">exclusion</option>
+                    <option value="hue">hue</option>
+                    <option value="saturation">saturation</option>
+                    <option value="color">color</option>
+                    <option value="luminosity">luminosity</option>
+                  </select>
+                </li>
+                <li class="switch_color">
+                  <p class="slider_title">color2 色2</p>
+                  <input class="slider on jscolor {required:false}" id="color2" />
+                  <input class="slider" id="opacity2" type="range" min="0" max="1" value="0.1" step="0.01" />
+                  <p class="current_val">0.1</p>
+                </li>
+                <li class="switch_color">
+                  <p class="slider_title">mix-blend-mode2</p>
+                  <select class="mix_blend slider" name="" id="mix-blend-mode2">
+                    <option value="none">none</option>
+                    <option value="normal">normal</option>
+                    <option value="multiply">multiply</option>
+                    <option value="screen">screen</option>
+                    <option value="overlay">overlay</option>
+                    <option value="darken">darken</option>
+                    <option value="lighten">lighten</option>
+                    <option value="color-dodge">color-dodge</option>
+                    <option value="color-burn">color-burn</option>
+                    <option value="hard-light">hard-light</option>
+                    <option value="soft-light">soft-light</option>
+                    <option value="difference">difference</option>
+                    <option value="exclusion">exclusion</option>
+                    <option value="hue">hue</option>
+                    <option value="saturation">saturation</option>
+                    <option value="color">color</option>
+                    <option value="luminosity">luminosity</option>
+                  </select>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <!-- [/slider_box] -->
         <div class="btn_wrapper">
           <p id="generate_button" class="btn">Generate</p>
         </div>
@@ -353,20 +346,6 @@
     <!-- [/content] -->
   </div>
   <!-- [/wrap] -->
-
-  <!-- adsense -->
-  <div class="wrap">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- CSS filter generator -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-5873669074216750"
-         data-ad-slot="2040518228"
-         data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
 
   <footer class="footer">
     <div class="wrap">
