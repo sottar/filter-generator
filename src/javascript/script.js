@@ -219,6 +219,7 @@ $(function () {
         $('#image_after').css('-moz-filter', resultFilter);
         $('#image_after').css('-o-filter', resultFilter);
         $('#image_after').css('-ms-filter', resultFilter);
+        setValueToRange();
         isPseudoAbled();
     });
     function getCurrentEffects(target) {
@@ -409,6 +410,24 @@ $(function () {
             pseudo_elements[5].value = 'lighten';
             value_unit[3].value = '66';
             value_unit[7].value = '105';
+        }
+    }
+    function setValueToRange() {
+        // value unit
+        var valueLength = value_unit.length;
+        for (var i = 0; i < valueLength; i++) {
+            var _thisEffectsId = '#' + value_unit[i].effects;
+            $(_thisEffectsId).children('.slider').val(value_unit[i].value);
+            $(_thisEffectsId).children('.current_val').text(value_unit[i].value + value_unit[i].unit);
+        }
+        // pseudo elements
+        var pseudoLength = pseudo_elements.length;
+        for (var i = 0; i < pseudoLength; i++) {
+            var _thisEffectsId = '#' + pseudo_elements[i].effects;
+            $(_thisEffectsId).val(pseudo_elements[i].value);
+            if (i == 1 || i == 4) {
+                $(_thisEffectsId).next('.current_val').text(pseudo_elements[i].value);
+            }
         }
     }
 });

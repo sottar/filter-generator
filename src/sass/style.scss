@@ -173,6 +173,7 @@ body {
       }
     }
     .recommend_image_wrap {
+      cursor: pointer;
       position: relative;
       .recommend_image {
         &::before, &::after {

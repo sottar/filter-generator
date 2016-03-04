@@ -490,6 +490,7 @@ body {
   font-size: 12px;
 }
 .right_block .recommend_box .recommend_image_wrap {
+  cursor: pointer;
   position: relative;
 }
 .right_block .recommend_box .recommend_image_wrap .recommend_image::before, .right_block .recommend_box .recommend_image_wrap .recommend_image::after {
