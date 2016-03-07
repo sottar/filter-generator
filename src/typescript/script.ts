@@ -269,7 +269,7 @@ $(function() {
 
   function getInstaEffects(effectName) {
     var effectsPseudoLength = pseudo_elements.length;
-    var effectsFilterLength = pseudo_elements.length;
+    var effectsFilterLength = value_unit.length;
     for (var i = 0; i < effectsPseudoLength; i++) {
       pseudo_elements[i].value = pseudo_elements[i].defaultVal;
     }
