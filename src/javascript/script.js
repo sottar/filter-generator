@@ -179,11 +179,11 @@ $(function () {
         return resultColor;
     }
     // show Detail Setting
-    $('#detail_btn').on('click', function () {
+    $('#recommend_btn').on('click', function () {
         var _this = $(this);
         if (_this.attr('class').match(/on/)) {
             _this.removeClass("on");
-            $('.switch_box').animate({
+            $('.recommend_box').animate({
                 height: 'hide',
                 opacity: 'hide'
             });
@@ -191,7 +191,7 @@ $(function () {
         }
         else {
             _this.addClass("on");
-            $('.switch_box').animate({
+            $('.recommend_box').animate({
                 height: 'show',
                 opacity: 'show'
             });

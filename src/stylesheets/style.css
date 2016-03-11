@@ -398,12 +398,6 @@ body {
 .right_block .slider_box {
   margin-bottom: 30px;
 }
-.right_block .slider_box #detail_btn {
-  cursor: pointer;
-}
-.right_block .slider_box .switch_box {
-  display: none;
-}
 .right_block .slider_box .detail_title {
   padding-bottom: 5px;
   font-size: 18px;
@@ -473,9 +467,28 @@ body {
 }
 .right_block .recommend_title {
   padding-bottom: 5px;
-  font-size: 18px;
+  font-size: 12px;
+}
+.right_block #recommend_btn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  width: 145px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background: #efefef;
+  padding: 3px 16px 5px 0;
+}
+.right_block #recommend_btn span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 .right_block .recommend_box {
+  display: none;
   height: 200px;
   overflow: scroll;
 }
@@ -521,8 +534,9 @@ body {
 }
 
 #generate_button {
-  margin: 10px 0px 0px 345px;
-  font-size: 17px;
+  margin: 10px 0px 0px 332px;
+  padding: 3px 16px;
+  font-size: 20px;
 }
 
 .header {
@@ -577,6 +591,12 @@ body {
 }
 #about .kinds_box li {
   height: 52px;
+}
+#about .kinds_box .table_title {
+  font-size: 18px;
+  background: #ddd;
+  font-weight: bold;
+  text-align: center;
 }
 #about .kinds_box .title {
   padding: 5px;

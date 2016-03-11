@@ -25,7 +25,7 @@
       <h2 class="title">目次</h2>
       <ul>
         <li><a href="#about_site">サイトについて</a></li>
-        <li><a href="#about_blend_mode">mix-blend-modeとは？</a></li>
+        <li><a href="#filter_kinds">filterの種類</a></li>
         <li><a href="#blend_mode_kinds">mix-blend-modeの種類</a></li>
         <li><a href="#howtouse">サイトの使い方</a></li>
       </ul>
@@ -37,17 +37,69 @@
         これは使える！ということで、編集前と編集後の画像を比べながら作成することができるgeneratorサイトを作成しました。
       </p>
     </section>
-    <section class="about_block" id="about_blend_mode">
-      <h2 class="title">mix-blend-modeとは？</h2>
-      <p>
-        mix-blend-modeというCSS3のプロパティ。DOMエレメントを重ねた時の見え方、どのように重ねて表示させるか、を指定するCSSプロパティです。<br />
-        PhotoshopやIllustratorなどの画像編集ソフトで昔から搭載されているものですが、クリエイティブを作る上で基本機能の一つです。<br />
-        Webの表現手法が広がり、<span class="underline">デザインの自由度が広がる注目すべきCSSプロパティです。</span>
-      </p>
+    <section class="about_block" id="filter_kinds">
+      <h2 class="title">filterの種類</h2>
+      <ul class="kinds_box">
+        <li class="clearfix table_title">
+          <p class="title">名称</p>
+          <p class="english">効果</p>
+          <p class="description">初期値</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">blur</p>
+          <p class="english">ぼかし</p>
+          <p class="description">0px</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">grayscale</p>
+          <p class="english">モノクロ</p>
+          <p class="description">0%</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">sepia</p>
+          <p class="english">セピア</p>
+          <p class="description">0%</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">saturate</p>
+          <p class="english">彩度</p>
+          <p class="description">100%</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">hue-rotate</p>
+          <p class="english">色相回転</p>
+          <p class="description">0deg</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">invert</p>
+          <p class="english">階調反転</p>
+          <p class="description">0%</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">opacity</p>
+          <p class="english">透明度</p>
+          <p class="description">100%</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">brightness</p>
+          <p class="english">明るさ</p>
+          <p class="description">100%</p>
+        </li>
+        <li class="clearfix">
+          <p class="title">contrast</p>
+          <p class="english">コントラスト</p>
+          <p class="description">100%</p>
+        </li>
+      </ul>
     </section>
     <section class="about_block" id="blend_mode_kinds">
       <h2 class="title">mix-blend-modeの種類</h2>
       <ul class="kinds_box">
+        <li class="clearfix table_title">
+          <p class="title">名称（日本語）</p>
+          <p class="english">名称（英語）</p>
+          <p class="description">効果</p>
+        </li>
         <li class="clearfix">
           <p class="title">比較(暗)</p>
           <p class="english">darken</p>
@@ -136,20 +188,6 @@
   </section>
   <!-- [/wrap] -->
 
-  <!-- adsense -->
-  <div class="wrap">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- CSS filter generator -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-5873669074216750"
-         data-ad-slot="2040518228"
-         data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
   <footer class="footer">
     <div class="wrap">
       <ul class="clearfix">
@@ -159,14 +197,5 @@
       </ul>
     </div>
   </footer>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  
-    ga('create', 'UA-59849686-2', 'auto');
-    ga('send', 'pageview');
-  </script>
 </body>
 </html>

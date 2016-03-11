@@ -81,12 +81,6 @@ body {
   width: 450px;
   .slider_box {
     margin-bottom: 30px;
-    #detail_btn {
-      cursor: pointer;
-    }
-    .switch_box {
-      display: none;
-    }
     .detail_title {
       padding-bottom: 5px;
       font-size: 18px;
@@ -157,9 +151,28 @@ body {
   }
   .recommend_title {
     padding-bottom: 5px;
-    font-size: 18px;
+    font-size: 12px;
+  }
+  #recommend_btn {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 145px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background: #efefef;
+    padding: 3px 16px 5px 0;
+    span {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
   }
   .recommend_box {
+    display: none;
     height: 200px;
     overflow: scroll;
     .wrap_recommends {
@@ -209,8 +222,9 @@ body {
   }
 }
 #generate_button {
-  margin: 10px 0px 0px 345px;
-  font-size: 17px;
+  margin: 10px 0px 0px 332px;
+  padding: 3px 16px;
+  font-size: 20px;
 }
 
 .header {
@@ -263,6 +277,12 @@ body {
     border: 1px solid #000;
     li {
       height: 52px;
+    }
+    .table_title {
+      font-size: 18px;
+      background: #ddd;
+      font-weight: bold;
+      text-align: center;
     }
     .title {
       padding: 5px;
