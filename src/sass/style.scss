@@ -160,8 +160,6 @@ body {
     position: relative;
     width: 145px;
     border: 1px solid #ccc;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
     border-radius: 7px;
     background: #efefef;
     padding: 3px 16px 5px 0;
@@ -328,19 +326,13 @@ body {
   text-align: center;
   border: 1px solid #ccc;
   border-bottom: 2px solid #bbb;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
   border-radius: 7px;
   cursor: pointer;
-  -webkit-transition: opacity 0.1s linear;
-  -webkit-transform-origin: 50% 50%;
-  -moz-transition: opacity 0.1s linear;
-  -mox-transform-origin: 50% 50%;
+  transition: opacity 0.1s linear;
+  transform-origin: 50% 50%;
   &:hover {
     opacity: 0.8;
     filter: alpha(opacity=80);
-    -moz-opacity: 0.80;
-    -ms-filter: "alpha( opacity=80 )";
   }
 }
 .clearfix:after {
@@ -353,15 +345,11 @@ body {
   a {
     color: #ededed;
     text-decoration: none;
-    -webkit-transition: opacity 0.3s linear;
-    -webkit-transform-origin: 50% 50%;
-    -moz-transition: opacity 0.3s linear;
-    -mox-transform-origin: 50% 50%;
+    transition: opacity 0.3s linear;
+    transform-origin: 50% 50%;
     &:hover {
       opacity: 0.8;
       filter: alpha(opacity=80);
-      -moz-opacity: 0.80;
-      -ms-filter: "alpha( opacity=80 )";
     }
   }
 }

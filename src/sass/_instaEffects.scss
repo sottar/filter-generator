@@ -21,10 +21,6 @@ $slumber: saturate(0.66) brightness(1.05);
 
 @mixin filter($effect) {
   filter: $effect;
-  -webkit-filter: $effect;
-  -moz-filter: $effect;
-  -o-filter: $effect;
-  -ms-filter: $effect;
 }
 
 #_1977 {
